@@ -65,29 +65,29 @@ const ServiceFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
   <div
    onMouseEnter={onMouseEnter}
    onMouseLeave={onMouseLeave}
-   className="absolute z-10 w-[500px] h-[300px] top-[64px] left-[325px] flex flex-col py-5">
+   className="absolute z-10 w-[500px] h-[300px] top-[64px] lg:left-[325px] 2xl:left-[630px] flex flex-col py-5">
    <div className="p-5 w-full flex gap-10 bg-tertiary border border-primary text-black rounded-lg shadow-md">
     <div className="flex flex-col gap-5">
-     <h1 className="font-bold text-gray-400">Offline Sale</h1>
+     <h1 className="font-bold text-gray-400 2xl:text-xl">Offline Sale</h1>
      <div className="flex flex-col gap-3 text-primary">
       {OfflineSalesLink.map((item, index) => (
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
      </div>
     </div>
     <div className="flex flex-col gap-5">
-     <h1 className="font-bold text-gray-400">Online Sale</h1>
+     <h1 className="font-bold text-gray-400 2xl:text-xl">Online Sale</h1>
      <div className="flex flex-col gap-3 text-primary">
       {OnlineSalesLink.map((item, index) => (
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
@@ -105,7 +105,7 @@ const BusinessFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
   <div
    onMouseEnter={onMouseEnter}
    onMouseLeave={onMouseLeave}
-   className="absolute z-10 w-[300px] h-[300px] top-[64px] left-[635px] flex flex-col py-5">
+   className="absolute z-10 w-[300px] h-[300px] top-[64px] lg:left-[635px] 2xl:left-[950px] flex flex-col py-5">
    <div className="p-5 w-full flex gap-10 bg-tertiary border border-primary text-black rounded-lg shadow-md">
     <div className="flex flex-col gap-5">
      <div className="flex flex-col gap-3 text-primary">
@@ -113,7 +113,7 @@ const BusinessFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
@@ -131,7 +131,7 @@ const MoreFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
   <div
    onMouseEnter={onMouseEnter}
    onMouseLeave={onMouseLeave}
-   className="absolute z-10 w-[200px] h-[200px] top-[64px] left-[800px] flex flex-col py-5">
+   className="absolute z-10 w-[200px] h-[200px] top-[64px] lg:left-[800px] 2xl:left-[1115px] flex flex-col py-5">
    <div className="p-5 w-full flex gap-10 bg-tertiary border border-primary text-black rounded-lg shadow-md">
     <div className="flex flex-col gap-5">
      <div className="flex flex-col gap-3 text-primary">
@@ -139,7 +139,7 @@ const MoreFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
@@ -336,7 +336,12 @@ const MobileNav = () => {
     className="p-2 bg-white rounded-lg animate-in slide-in-from-left">
     <RxHamburgerMenu className="size-5 text-primary" />
    </button>
-   {isOpen && <MobilePopup isVisible={toggleOpen} onClose={toggleClose}/>}
+   {isOpen && (
+    <MobilePopup
+     isVisible={toggleOpen}
+     onClose={toggleClose}
+    />
+   )}
   </div>
  );
 };
@@ -379,20 +384,20 @@ const Header = () => {
    className={`fixed z-10 top-0 flex justify-between lg:justify-center items-center lg:px-[100px] 2xl:px-[300px] py-4 p-4 w-full left-0 transition-all duration-500 my-auto
     ${
      header
-      ? " w-[100%] px-6 py-6 bg-tertiary/70 backdrop-blur-lg shadow-md"
-      : "bg-[#357266] px-6 py-8 "
+      ? " w-[100%] px-6 py-6 bg-primary backdrop-blur-lg shadow-md"
+      : "bg-transparent px-6 py-8 "
     }`}>
    <Link
     href="/"
     className={`text-4xl font-bold font-raleway italic transition-all duration-500 ${
-     header ? "text-primary" : "text-tertiary"
+     header ? "text-tertiary  " : "text-tertiary"
     }`}>
     $ELLARIS
    </Link>
 
    <nav
     className={`hidden lg:flex items-center gap-6 transition-all duration-500 font-semibold ml-auto ${
-     header ? ` text-primary` : ` text-tertiary`
+     header ? ` text-tertiary` : ` text-tertiary`
     }`}>
     <button
      onMouseEnter={() => setFlyoutVisible(true)}
@@ -407,8 +412,8 @@ const Header = () => {
      onMouseLeave={() => setFlyoutVisible(false)}
     />
 
-    <Link href="/">Price</Link>
-    <Link href="/">Contact Us</Link>
+    <Link href="/price">Price</Link>
+    <Link href="/contact-us">Contact Us</Link>
     <Link href="/">Blog</Link>
     <button
      onMouseEnter={() => setFlyoutBVisible(true)}
@@ -436,14 +441,14 @@ const Header = () => {
    <div className="hidden lg:flex gap-6 ml-auto items-center">
     <nav
      className={`font-semibold transition-all duration-500 ${
-      header ? "text-primary" : "text-tertiary"
+      header ? "text-tertiary" : "text-tertiary"
      }`}>
-     <Link href="/">Sign In</Link>
+     <Link href="/sign-in">Sign In</Link>
     </nav>
     <nav
      className={`rounded-full font-semibold transition-all duration-500 px-4 py-2 ${
       header
-       ? "text-tertiary bg-primary hover:opacity-80"
+       ? "text-primary bg-tertiary hover:opacity-80"
        : "text-primary bg-tertiary hover:bg-tertiary/80"
      }`}>
      <Link href="/demo">Request a Demo</Link>
