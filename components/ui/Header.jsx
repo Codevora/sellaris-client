@@ -65,29 +65,29 @@ const ServiceFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
   <div
    onMouseEnter={onMouseEnter}
    onMouseLeave={onMouseLeave}
-   className="absolute z-10 w-[500px] h-[300px] top-[64px] left-[325px] flex flex-col py-5">
+   className="absolute z-10 w-[500px] h-[300px] top-[64px] lg:left-[325px] 2xl:left-[630px] flex flex-col py-5">
    <div className="p-5 w-full flex gap-10 bg-tertiary border border-primary text-black rounded-lg shadow-md">
     <div className="flex flex-col gap-5">
-     <h1 className="font-bold text-gray-400">Offline Sale</h1>
+     <h1 className="font-bold text-gray-400 2xl:text-xl">Offline Sale</h1>
      <div className="flex flex-col gap-3 text-primary">
       {OfflineSalesLink.map((item, index) => (
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
      </div>
     </div>
     <div className="flex flex-col gap-5">
-     <h1 className="font-bold text-gray-400">Online Sale</h1>
+     <h1 className="font-bold text-gray-400 2xl:text-xl">Online Sale</h1>
      <div className="flex flex-col gap-3 text-primary">
       {OnlineSalesLink.map((item, index) => (
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
@@ -105,7 +105,7 @@ const BusinessFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
   <div
    onMouseEnter={onMouseEnter}
    onMouseLeave={onMouseLeave}
-   className="absolute z-10 w-[300px] h-[300px] top-[64px] left-[635px] flex flex-col py-5">
+   className="absolute z-10 w-[300px] h-[300px] top-[64px] lg:left-[635px] 2xl:left-[950px] flex flex-col py-5">
    <div className="p-5 w-full flex gap-10 bg-tertiary border border-primary text-black rounded-lg shadow-md">
     <div className="flex flex-col gap-5">
      <div className="flex flex-col gap-3 text-primary">
@@ -113,7 +113,7 @@ const BusinessFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
@@ -131,7 +131,7 @@ const MoreFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
   <div
    onMouseEnter={onMouseEnter}
    onMouseLeave={onMouseLeave}
-   className="absolute z-10 w-[200px] h-[200px] top-[64px] left-[800px] flex flex-col py-5">
+   className="absolute z-10 w-[200px] h-[200px] top-[64px] lg:left-[800px] 2xl:left-[1115px] flex flex-col py-5">
    <div className="p-5 w-full flex gap-10 bg-tertiary border border-primary text-black rounded-lg shadow-md">
     <div className="flex flex-col gap-5">
      <div className="flex flex-col gap-3 text-primary">
@@ -139,7 +139,7 @@ const MoreFlyout = ({isVisible, onMouseEnter, onMouseLeave}) => {
        <Link
         href={item.path}
         key={index}
-        className="hover:underline">
+        className="hover:underline 2xl:text-lg">
         {item.name}
        </Link>
       ))}
@@ -438,7 +438,7 @@ const Header = () => {
      className={`font-semibold transition-all duration-500 ${
       header ? "text-primary" : "text-tertiary"
      }`}>
-     <Link href="/">Sign In</Link>
+     <Link href="/sign-in">Sign In</Link>
     </nav>
     <nav
      className={`rounded-full font-semibold transition-all duration-500 px-4 py-2 ${

@@ -20,6 +20,7 @@ const Home = () => {
    {/* Hero Section */}
    <div className="flex flex-col lg:px-[100px] 2xl:px-[300px] justify-center h-screen font-bold bg-primary">
     <div className="flex flex-col justify-start lg:gap-5 2xl:gap-10 lg:w-[600px]">
+        
      <h1 className="font-raleway italic font-bold lg:text-4xl 2xl:text-5xl text-tertiary">
       Lebih Praktis Lebih Baik!
      </h1>
