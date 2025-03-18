@@ -9,11 +9,7 @@ const PhoneInput = dynamic(() => import("react-phone-input-2"), {ssr: false});
 
 const Header = () => {
  return (
-<<<<<<< HEAD
-  <header className="fixed z-10 top-0 flex  items-center py-4 p-4 w-full left-0 bg-primary shadow-lg">
-=======
   <header className="fixed z-10 top-0 flex  items-center  py-4 p-4 w-full left-0 bg-primary shadow-lg">
->>>>>>> 65b3a4c079f893b434398ba737249e1dc647740b
    <div className="flex justify-between items-center w-full">
     <Link
      href="/"
@@ -40,27 +36,21 @@ const Register = () => {
  const [password, setPassword] = useState("");
  const [agreement, setAgreement] = useState(false);
 
-
  const handleSubmit = (e) => {
   e.preventDefault();
   // Validasi dan pengiriman data
-  console.log({name, email, phone, password, agreement,});
+  console.log({name, email, phone, password, agreement});
  };
  return (
   <div className="flex items-center justify-center h-screen bg-primary">
    <Header />
    <form
     onSubmit={handleSubmit}
-<<<<<<< HEAD
     className="bg-white/70 backdrop-blur-lg p-6 rounded-lg 2xl:mt-0 lg:mt-10 shadow-md w-96 flex flex-col items-center justify-center gap-2">
-=======
-    className="bg-white/70 backdrop-blur-lg p-6 rounded-lg shadow-md w-96 flex flex-col items-center justify-center gap-2">
->>>>>>> 65b3a4c079f893b434398ba737249e1dc647740b
     <h2 className="text-3xl font-bold text-primary mb-4">Register</h2>
     <div className="w-full">
-     
      <input
-     placeholder="Name"
+      placeholder="Name"
       type="text"
       value={name}
       onChange={(e) => setName(e.target.value)}
@@ -69,9 +59,8 @@ const Register = () => {
      />
     </div>
     <div className="w-full">
-     
      <input
-     placeholder="Email"
+      placeholder="Email"
       type="email"
       value={email}
       onChange={(e) => setEmail(e.target.value)}
@@ -81,7 +70,6 @@ const Register = () => {
     </div>
 
     <div className="w-full">
-    
      <PhoneInput
       country={"id"} // Set default country code (Indonesia)
       value={phone}
@@ -102,8 +90,8 @@ const Register = () => {
      />
     </div>
     <div className="w-full">
-   <input
-   placeholder="Password"
+     <input
+      placeholder="Password"
       type="password"
       value={password}
       onChange={(e) => setPassword(e.target.value)}
@@ -127,7 +115,7 @@ const Register = () => {
       </label>
      </div>
     </div>
-    
+
     <button
      type="submit"
      className="w-full bg-primary text-white p-2 rounded cursor-pointer">

@@ -42,27 +42,16 @@ const Popup = ({isVisible, onCLose}) => {
     </button>
    </div>
 
-   {/*Body*/}
-   <div className="h-full w-full flex flex-col justify-start bg-gray-200 px-3 py-2">
-    <div className="flex items-center gap-1 ">
-     <div className="rounded-full bg-primary w-8 h-8 italic flex items-center justify-center text-white ">
-      $
-     </div>
-
-     <div className="text-start bg-white p-2 rounded-lg border border-primary">
-      <h1>Halo Ada yang bisa kami bantu?</h1>
-     </div>
-    </div>
-   </div>
-
    {/*Messages*/}
 
-   <div className="messages">
+   <div className="messages h-full w-full flex flex-col gap-3 overflow-y-auto justify-start bg-gray-200 px-3 py-2">
     {messages.map((msg, index) => (
      <div
       key={index}
-      className="message">
-      {msg.text}
+      className="flex gap-2 justify-end items-center w-auto">
+      <div className="message p-2 rounded-xl border w-auto bg-primary text-tertiary">
+       {msg.text}
+      </div>
      </div>
     ))}
    </div>
@@ -91,7 +80,6 @@ const Popup = ({isVisible, onCLose}) => {
 const LiveChat = () => {
  const pathname = usePathname();
  const [openPopup, setOpenPopup] = useState(false);
- const [liveChat, setLiveChat] = useState(false);
 
  const togglePopup = () => {
   setOpenPopup(!openPopup);

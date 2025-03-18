@@ -18,9 +18,8 @@ const Home = () => {
  return (
   <div className="flex flex-col w-full">
    {/* Hero Section */}
-   <div className="flex flex-col lg:px-[100px] 2xl:px-[300px] justify-center h-screen font-bold bg-primary" >
+   <div className="flex flex-col md:px-[50px] lg:px-[30px] xl:px-[100px] 2xl:px-[300px] justify-center h-screen font-bold bg-primary">
     <div className="flex flex-col justify-start lg:gap-5 2xl:gap-10 lg:w-[600px]">
-        
      <h1 className="font-raleway italic font-bold lg:text-4xl 2xl:text-5xl text-tertiary">
       Lebih Praktis Lebih Baik!
      </h1>
@@ -41,7 +40,7 @@ const Home = () => {
    </div>
 
    {/* Content Section */}
-   <div className="flex flex-col lg:px-[100px] 2xl:px-[300px] justify-center items-end h-screen font-bold bg-tertiary">
+   <div className="flex flex-col md:px-[50px] lg:px-[30px] xl:px-[100px] 2xl:px-[300px] justify-center items-end h-screen font-bold bg-tertiary">
     <div className="flex flex-col justify-start gap-10 lg:w-[600px]">
      <h1 className="font-raleway italic font-bold lg:text-4xl 2xl:text-5xl text-primary">
       Pengelolaan Bisnis yang lebih Efisien
@@ -71,7 +70,7 @@ const Home = () => {
    </div>
 
    {/* Content Section */}
-   <div className="flex flex-col lg:px-[100px] 2xl:px-[300px] justify-center items-center h-auto py-10 font-bold bg-gray-200">
+   <div className="flex flex-col md:px-[50px] lg:px-[30px] xl:px-[100px] 2xl:px-[300px] justify-center items-center h-auto py-10 font-bold bg-gray-200">
     <div className="flex flex-col text-center items-center gap-10 lg:w-[600px]">
      <h1 className="font-raleway font-black text-5xl text-primary">
       Used By Premium Brands
@@ -98,7 +97,7 @@ const Home = () => {
    </div>
 
    {/* Content Section */}
-   <div className="flex flex-col lg:px-[150px] 2xl:px-[300px] justify-center h-screen font-bold bg-primary">
+   <div className="flex flex-col md:px-[50px] lg:px-[30px] xl:px-[100px] 2xl:px-[300px] justify-center h-screen font-bold bg-primary">
     <div className="flex flex-col justify-start gap-10 lg:w-[600px]">
      <h1 className="font-raleway italic font-bold text-5xl text-tertiary">
       What they say about Us!
@@ -112,7 +111,7 @@ const Home = () => {
    </div>
 
    {/* Content Section */}
-   <div className="flex flex-col lg:px-[100px] 2xl:px-[300px] justify-center items-end h-screen font-bold bg-gray-200">
+   <div className="flex flex-col md:px-[50px] lg:px-[30px] xl:px-[100px] 2xl:px-[300px] justify-center items-end h-screen font-bold bg-gray-200">
     <div className="flex flex-col justify-start gap-10 lg:w-[600px]">
      <h1 className="font-raleway italic font-bold lg:text-4xl 2xl:text-5xl text-primary">
       Harga yang lebih terjangkau!
@@ -140,7 +139,7 @@ const Home = () => {
      </button>
     </div>
    </div>
-   <div className="flex flex-col lg:px-[100px] 2xl:px-[300px] justify-center items-end h-screen font-bold bg-tertiary">
+   <div className="flex flex-col md:px-[50px] lg:px-[30px] xl:px-[100px] 2xl:px-[300px] justify-center items-end h-screen font-bold bg-tertiary">
     <div className="flex flex-col justify-start gap-10 lg:w-[600px]">
      <h1 className="font-raleway italic font-bold lg:text-4xl 2xl:text-5xl text-primary">
       Harga yang lebih terjangkau!

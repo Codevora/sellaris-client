@@ -1,22 +1,5 @@
 import PricingCards from "@/components/ui/PricingCards";
-
-const Pricing = [
- {
-  name: "Basic",
-  price: "Rp. 100,000",
-  description: "Paket yang mendukung operasi dasar usaha",
- },
- {
-  name: "Pro",
-  price: "Rp. 100,000",
-  description: "Paket yang mendukung operasi dasar usaha",
- },
- {
-  name: "Enterprise",
-  price: "Rp. 100,000",
-  description: "Paket yang mendukung operasi dasar usaha",
- },
-];
+import PricingTable from "@/components/ui/PricingTable";
 
 const Price = () => {
  return (
@@ -35,6 +18,10 @@ const Price = () => {
 
    <div className="flex flex-col lg:px-[100px] 2xl:px-[300px] items-center justify-center h-auto pb-24 pt-10 bg-gray-200">
     <PricingCards />
+   </div>
+
+   <div className="min-h-screen flex px-14 py-10 justify-center w-full">
+    <PricingTable />
    </div>
   </div>
  );

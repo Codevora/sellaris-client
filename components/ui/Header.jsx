@@ -31,23 +31,23 @@ const BusinessSolutionsLink = [
 const OfflineSalesLink = [
  {
   name: "Point of Sales",
-  path: "/",
+  path: "/offline-sales/point-of-sales",
  },
  {
   name: "Cashier APP",
-  path: "/",
+  path: "//offline-sales/cashier-app",
  },
  {
   name: "Inventory Management",
-  path: "/",
+  path: "/offline-sales/inventory-management",
  },
  {
   name: "Table Management",
-  path: "/",
+  path: "/offline-sales/table-management",
  },
  {
   name: "Business Report",
-  path: "/",
+  path: "/offline-sales/business-report",
  },
 ];
 
@@ -381,7 +381,7 @@ const Header = () => {
 
  return (
   <header
-   className={`fixed z-10 top-0 flex justify-between lg:justify-center items-center lg:px-[100px] 2xl:px-[300px] py-4 p-4 w-full left-0 transition-all duration-500 my-auto
+   className={`fixed z-10 top-0 flex justify-between lg:justify-center items-center md:px-[50px] lg:px-[30px] xl:px-[100px] 2xl:px-[300px] py-4 p-4 w-full left-0 transition-all duration-500 my-auto
     ${
      header
       ? " w-[100%] px-6 py-6 bg-primary backdrop-blur-lg shadow-md"
